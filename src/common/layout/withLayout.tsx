@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Analytics } from '@vercel/analytics/react';
 
 import { OptimaLayout } from './optima/OptimaLayout';
 import { PlainLayout } from './plain/PlainLayout';
@@ -26,5 +27,6 @@ export function withLayout(layoutOptions: WithLayout, children: React.ReactNode)
 
   // if no layout is specified, return the children as-is
   console.error('No layout specified for this top-level page');
+  <Analytics />
   return <>{children}</>;
 }

@@ -1,14 +1,14 @@
-import { ModelVendorAnthropic } from './anthropic/anthropic.vendor';
-import { ModelVendorAzure } from './azure/azure.vendor';
-import { ModelVendorGemini } from './gemini/gemini.vendor';
-import { ModelVendorLMStudio } from './lmstudio/lmstudio.vendor';
-import { ModelVendorLocalAI } from './localai/localai.vendor';
-import { ModelVendorMistral } from './mistral/mistral.vendor';
-import { ModelVendorOllama } from './ollama/ollama.vendor';
-import { ModelVendorOoobabooga } from './oobabooga/oobabooga.vendor';
+// import { ModelVendorAnthropic } from './anthropic/anthropic.vendor';
+// import { ModelVendorAzure } from './azure/azure.vendor';
+// import { ModelVendorGemini } from './gemini/gemini.vendor';
+// import { ModelVendorLMStudio } from './lmstudio/lmstudio.vendor';
+// import { ModelVendorLocalAI } from './localai/localai.vendor';
+// import { ModelVendorMistral } from './mistral/mistral.vendor';
+// import { ModelVendorOllama } from './ollama/ollama.vendor';
+// import { ModelVendorOoobabooga } from './oobabooga/oobabooga.vendor';
 import { ModelVendorOpenAI } from './openai/openai.vendor';
 import { ModelVendorOpenRouter } from './openrouter/openrouter.vendor';
-import { ModelVendorTogetherAI } from '~/modules/llms/vendors/togetherai/togetherai.vendor';
+// import { ModelVendorTogetherAI } from '~/modules/llms/vendors/togetherai/togetherai.vendor';
 
 import type { IModelVendor } from './IModelVendor';
 import { DLLMId, DModelSource, DModelSourceId, findLLMOrThrow, findSourceOrThrow } from '../store-llms';

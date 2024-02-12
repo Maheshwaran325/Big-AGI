@@ -5,7 +5,7 @@ import { useIsMobile } from '~/common/components/useMatchMedia';
 import { useRouterQuery } from '~/common/app.routes';
 
 import { DrawHeading } from './components/DrawHeading';
-import { DrawUnconfigured } from './components/DrawUnconfigured';
+// import { DrawUnconfigured } from './components/DrawUnconfigured';
 import { Gallery } from './Gallery';
 import { TextToImage } from './TextToImage';
 
@@ -55,7 +55,7 @@ export function AppDraw() {
       }}
     />
 
-    {!mayWork && <DrawUnconfigured />}
+    {/* {!mayWork && <DrawUnconfigured />} */}
 
     {mayWork && <Gallery />}
 

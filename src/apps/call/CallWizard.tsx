@@ -108,8 +108,9 @@ export function CallWizard(props: { strict?: boolean, conversationId: string | n
   const handleOverrideRecognition = () => setRecognitionOverride(true);
 
   const handleConfigureElevenLabs = () => {
-    openPreferencesTab(PreferencesTab.Voice);
+    openPreferencesTab(PreferencesTab.Chat);
   };
+
 
   const handleFinishButton = () => {
     if (!allGood)

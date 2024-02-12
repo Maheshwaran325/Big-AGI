@@ -1,53 +1,53 @@
-import * as React from 'react';
+// import * as React from 'react';
 
-import { FormInputKey } from '~/common/components/forms/FormInputKey';
-import { InlineError } from '~/common/components/InlineError';
-import { Link } from '~/common/components/Link';
-import { SetupFormRefetchButton } from '~/common/components/forms/SetupFormRefetchButton';
+// import { FormInputKey } from '~/common/components/forms/FormInputKey';
+// import { InlineError } from '~/common/components/InlineError';
+// import { Link } from '~/common/components/Link';
+// import { SetupFormRefetchButton } from '~/common/components/forms/SetupFormRefetchButton';
 
-import { DModelSourceId } from '../../store-llms';
-import { useLlmUpdateModels } from '../useLlmUpdateModels';
-import { useSourceSetup } from '../useSourceSetup';
+// import { DModelSourceId } from '../../store-llms';
+// import { useLlmUpdateModels } from '../useLlmUpdateModels';
+// import { useSourceSetup } from '../useSourceSetup';
 
-import { ModelVendorMistral } from './mistral.vendor';
-
-
-const MISTRAL_REG_LINK = 'https://console.mistral.ai/';
+// import { ModelVendorMistral } from './mistral.vendor';
 
 
-export function MistralSourceSetup(props: { sourceId: DModelSourceId }) {
+// const MISTRAL_REG_LINK = 'https://console.mistral.ai/';
 
-  // external state
-  const { source, sourceSetupValid, access, updateSetup } =
-    useSourceSetup(props.sourceId, ModelVendorMistral);
 
-  // derived state
-  const { oaiKey: mistralKey } = access;
+// export function MistralSourceSetup(props: { sourceId: DModelSourceId }) {
 
-  const needsUserKey = !ModelVendorMistral.hasBackendCap?.();
-  const shallFetchSucceed = !needsUserKey || (!!mistralKey && sourceSetupValid);
-  const showKeyError = !!mistralKey && !sourceSetupValid;
+//   // external state
+//   const { source, sourceSetupValid, access, updateSetup } =
+//     useSourceSetup(props.sourceId, ModelVendorMistral);
 
-  // fetch models
-  const { isFetching, refetch, isError, error } =
-    useLlmUpdateModels(ModelVendorMistral, access, shallFetchSucceed, source);
+//   // derived state
+//   const { oaiKey: mistralKey } = access;
 
-  return <>
+//   const needsUserKey = !ModelVendorMistral.hasBackendCap?.();
+//   const shallFetchSucceed = !needsUserKey || (!!mistralKey && sourceSetupValid);
+//   const showKeyError = !!mistralKey && !sourceSetupValid;
 
-    <FormInputKey
-      id='mistral-key' label='Mistral Key'
-      rightLabel={<>{needsUserKey
-        ? !mistralKey && <Link level='body-sm' href={MISTRAL_REG_LINK} target='_blank'>request Key</Link>
-        : '✔️ already set in server'}
-      </>}
-      value={mistralKey} onChange={value => updateSetup({ oaiKey: value })}
-      required={needsUserKey} isError={showKeyError}
-      placeholder='...'
-    />
+//   // fetch models
+//   const { isFetching, refetch, isError, error } =
+//     useLlmUpdateModels(ModelVendorMistral, access, shallFetchSucceed, source);
 
-    <SetupFormRefetchButton refetch={refetch} disabled={/*!shallFetchSucceed ||*/ isFetching} loading={isFetching} error={isError} />
+//   return <>
 
-    {isError && <InlineError error={error} />}
+//     <FormInputKey
+//       id='mistral-key' label='Mistral Key'
+//       rightLabel={<>{needsUserKey
+//         ? !mistralKey && <Link level='body-sm' href={MISTRAL_REG_LINK} target='_blank'>request Key</Link>
+//         : '✔️ already set in server'}
+//       </>}
+//       value={mistralKey} onChange={value => updateSetup({ oaiKey: value })}
+//       required={needsUserKey} isError={showKeyError}
+//       placeholder='...'
+//     />
 
-  </>;
-}
+//     <SetupFormRefetchButton refetch={refetch} disabled={/*!shallFetchSucceed ||*/ isFetching} loading={isFetching} error={isError} />
+
+//     {isError && <InlineError error={error} />}
+
+//   </>;
+// }

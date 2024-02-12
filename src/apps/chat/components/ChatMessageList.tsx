@@ -103,21 +103,23 @@ export function ChatMessageList(props: {
 
   const handleTextImagine = React.useCallback(async (text: string) => {
     if (!capabilityHasT2I)
-      return openPreferencesTab(PreferencesTab.Draw);
+      return;
     if (conversationId) {
       setIsImagining(true);
       await onTextImagine(conversationId, text);
       setIsImagining(false);
     }
-  }, [capabilityHasT2I, conversationId, onTextImagine, openPreferencesTab]);
+  }, [capabilityHasT2I, conversationId, onTextImagine]);
+
 
   const handleTextSpeak = React.useCallback(async (text: string) => {
     if (!isSpeakable)
-      return openPreferencesTab(PreferencesTab.Voice);
+      return openPreferencesTab(PreferencesTab.None);
     setIsSpeaking(true);
     await onTextSpeak(text);
     setIsSpeaking(false);
   }, [isSpeakable, onTextSpeak, openPreferencesTab]);
+
 
 
   // operate on the local selection set

@@ -12,7 +12,8 @@ import { ROUTE_INDEX } from '~/common/app.routes';
 import { capitalizeFirstLetter } from '~/common/util/textUtils';
 import { cssRainbowColorKeyframes } from '~/common/app.theme';
 
-import { newsCallout, NewsItems } from './news.data';
+import { NewsItems } from './news.data';
+// import { newsCallout, NewsItems } from './news.data';
 
 // number of news items to show by default, before the expander
 const DEFAULT_NEWS_COUNT = 3;
@@ -60,7 +61,7 @@ export function AppNews() {
         </Typography>
 
         <Typography>
-          {capitalizeFirstLetter(Brand.Title.Base)} has been updated to version {firstNews?.versionCode}
+          Get started with {capitalizeFirstLetter(Brand.Title.Base)}, your new marketing assistant  {firstNews?.versionCode}
         </Typography>
 
         <Box>
@@ -70,11 +71,11 @@ export function AppNews() {
             endDecorator='✨'
             sx={{ minWidth: 200 }}
           >
-            Sweet
+           Launch
           </Button>
         </Box>
 
-        {!!newsCallout && <Container disableGutters maxWidth='sm'>{newsCallout}</Container>}
+        {/* {!!newsCallout && <Container disableGutters maxWidth='sm'>{newsCallout}</Container>} */}
 
         {!!news && <Container disableGutters maxWidth='sm'>
           {news?.map((ni, idx) => {

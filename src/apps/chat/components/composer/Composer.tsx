@@ -50,7 +50,7 @@ import type { ComposerOutputMultiPart } from './composer.types';
 import { ButtonAttachCameraMemo, useCameraCaptureModal } from './buttons/ButtonAttachCamera';
 import { ButtonAttachClipboardMemo } from './buttons/ButtonAttachClipboard';
 import { ButtonAttachFileMemo } from './buttons/ButtonAttachFile';
-import { ButtonCall } from './buttons/ButtonCall';
+// import { ButtonCall } from './buttons/ButtonCall';
 import { ButtonMicContinuationMemo } from './buttons/ButtonMicContinuation';
 import { ButtonMicMemo } from './buttons/ButtonMic';
 import { ButtonOptionsDraw } from './buttons/ButtonOptionsDraw';
@@ -181,7 +181,9 @@ export function Composer(props: {
 
   const handleCallClicked = () => props.conversationId && systemPurposeId && launchAppCall(props.conversationId, systemPurposeId);
 
-  const handleDrawOptionsClicked = () => openPreferencesTab(PreferencesTab.Draw);
+  const handleDrawerOptionsClicked = () => openPreferencesTab(PreferencesTab.Chat);
+
+
 
   const handleTextImagineClicked = () => {
     if (!composeText || !props.conversationId)
@@ -638,12 +640,12 @@ export function Composer(props: {
             <Box sx={{ display: 'flex' }}>
 
               {/* [mobile] bottom-corner secondary button */}
-              {isMobile && (isChat
+              {/* {isMobile && (isChat
                   ? <ButtonCall isMobile disabled={!props.conversationId || !chatLLMId} onClick={handleCallClicked} sx={{ mr: { xs: 1, md: 2 } }} />
                   : isDraw
-                    ? <ButtonOptionsDraw isMobile onClick={handleDrawOptionsClicked} sx={{ mr: { xs: 1, md: 2 } }} />
+                    ? <ButtonOptionsDraw isMobile onClick={handleDrawerOptionsClicked} sx={{ mr: { xs: 1, md: 2 } }} />
                     : <IconButton disabled sx={{ mr: { xs: 1, md: 2 } }} />
-              )}
+              )} */}
 
               {/* Responsive Send/Stop buttons */}
               <ButtonGroup
@@ -706,10 +708,10 @@ export function Composer(props: {
             {isDesktop && <Box sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column', gap: 1, justifyContent: 'flex-end' }}>
 
               {/* [desktop] Call secondary button */}
-              {isChat && <ButtonCall disabled={!props.conversationId || !chatLLMId} onClick={handleCallClicked} />}
+              {/* {isChat && <ButtonCall disabled={!props.conversationId || !chatLLMId} onClick={handleCallClicked} />} */}
 
               {/* [desktop] Draw Options secondary button */}
-              {isDraw && <ButtonOptionsDraw onClick={handleDrawOptionsClicked} />}
+              {isDraw && <ButtonOptionsDraw onClick={handleDrawerOptionsClicked} />}
 
             </Box>}
 

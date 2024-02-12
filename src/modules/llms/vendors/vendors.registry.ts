@@ -14,31 +14,31 @@ import type { IModelVendor } from './IModelVendor';
 import { DLLMId, DModelSource, DModelSourceId, findLLMOrThrow, findSourceOrThrow } from '../store-llms';
 
 export type ModelVendorId =
-  | 'anthropic'
-  | 'azure'
-  | 'googleai'
-  | 'lmstudio'
-  | 'localai'
-  | 'mistral'
-  | 'ollama'
-  | 'oobabooga'
+  // | 'anthropic'
+  // | 'azure'
+  // | 'googleai'
+  // | 'lmstudio'
+  // | 'localai'
+  // | 'mistral'
+  // | 'ollama'
+  // | 'oobabooga'
   | 'openai'
   | 'openrouter'
-  | 'togetherai';
+  // | 'togetherai';
 
 /** Global: Vendor Instances Registry **/
 const MODEL_VENDOR_REGISTRY: Record<ModelVendorId, IModelVendor> = {
-  anthropic: ModelVendorAnthropic,
-  azure: ModelVendorAzure,
-  googleai: ModelVendorGemini,
-  lmstudio: ModelVendorLMStudio,
-  localai: ModelVendorLocalAI,
-  mistral: ModelVendorMistral,
-  ollama: ModelVendorOllama,
-  oobabooga: ModelVendorOoobabooga,
+  // anthropic: ModelVendorAnthropic,
+  // azure: ModelVendorAzure,
+  // googleai: ModelVendorGemini,
+  // lmstudio: ModelVendorLMStudio,
+  // localai: ModelVendorLocalAI,
+  // mistral: ModelVendorMistral,
+  // ollama: ModelVendorOllama,
+  // oobabooga: ModelVendorOoobabooga,
   openai: ModelVendorOpenAI,
   openrouter: ModelVendorOpenRouter,
-  togetherai: ModelVendorTogetherAI,
+  // togetherai: ModelVendorTogetherAI,
 } as Record<string, IModelVendor>;
 
 const MODEL_VENDOR_DEFAULT: ModelVendorId = 'openai';

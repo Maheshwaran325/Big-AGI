@@ -8,22 +8,24 @@
  */
 export const Brand = {
   Title: {
-    Base: 'big-AGI',
-    Common: (process.env.NODE_ENV === 'development' ? '[DEV] ' : '') + 'big-AGI',
+    Base: 'Sprochatai',
+    Common: (process.env.NODE_ENV === 'development' ? '[DEV] ' : '') + 'Sprochatai',
   },
   Meta: {
-    Description: 'Launch big-AGI to unlock the full potential of AI, with precise control over your data and models. Voice interface, AI personas, advanced features, and fun UX.',
-    SiteName: 'big-AGI | Precision AI for You',
+    Description: 'Launch Sprochatai to unlock the full potential of AI, with precise control over your data and models. AI personas, advanced features, and fun UX.',
+    SiteName: 'Sprochatai | Precision AI for You',
     ThemeColor: '#32383E',
-    TwitterSite: '@enricoros',
+    TwitterSite: '',
   },
   URIs: {
-    Home: 'https://big-agi.com',
-    // App: 'https://get.big-agi.com',
-    CardImage: 'https://big-agi.com/icons/card-dark-1200.png',
+    Home: 'https://statix.pro',
+    // App: 'https://statix.pro',
+    CardImage: 'http://statix.pro/wp-content/uploads/2024/02/sprochat-logo-new.png',
     OpenRepo: 'https://github.com/enricoros/big-agi',
     OpenProject: 'https://github.com/users/enricoros/projects/4',
     SupportInvite: 'https://discord.gg/MkH4qj2Jp9',
+    InstagramInvite: 'https://www.instagram.com/statix_pro',
+    WhatsappInvite: 'https://wa.me/9361091908',
     // Twitter: 'https://www.twitter.com/enricoros',
     PrivacyPolicy: 'https://big-agi.com/privacy',
   },

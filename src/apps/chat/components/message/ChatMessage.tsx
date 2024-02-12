@@ -85,15 +85,15 @@ export function makeAvatar(messageAvatar: string | null, messageRole: DMessage['
       // typing gif (people seem to love this, so keeping it after april fools')
       const isTextToImage = messageOriginLLM === 'DALL·E' || messageOriginLLM === 'Prodia';
       const isReact = messageOriginLLM?.startsWith('react-');
-      if (messageTyping) {
-        return <Avatar
-          alt={messageSender} variant='plain'
-          src={isTextToImage ? 'https://i.giphy.com/media/5t9ujj9cMisyVjUZ0m/giphy.webp'
-            : isReact ? 'https://i.giphy.com/media/l44QzsOLXxcrigdgI/giphy.webp'
-              : 'https://i.giphy.com/media/jJxaUysjzO9ri/giphy.webp'}
-          sx={{ ...mascotSx, borderRadius: 'sm' }}
-        />;
-      }
+      // if (messageTyping) {
+      //   return <Avatar
+      //     alt={messageSender} variant='plain'
+      //     src={isTextToImage ? 'https://i.giphy.com/media/5t9ujj9cMisyVjUZ0m/giphy.webp'
+      //       : isReact ? 'https://i.giphy.com/media/l44QzsOLXxcrigdgI/giphy.webp'
+      //         : 'https://i.giphy.com/media/jJxaUysjzO9ri/giphy.webp'}
+      //     sx={{ ...mascotSx, borderRadius: 'sm' }}
+      //   />;
+      // }
 
       // text-to-image: icon
       if (isTextToImage)

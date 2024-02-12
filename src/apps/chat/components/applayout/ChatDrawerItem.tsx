@@ -150,7 +150,7 @@ function ChatDrawerItem(props: {
         ? (
           <Avatar
             alt='typing' variant='plain'
-            src='https://i.giphy.com/media/jJxaUysjzO9ri/giphy.webp'
+            // src='https://i.giphy.com/media/jJxaUysjzO9ri/giphy.webp'
             sx={{
               width: '1.5rem',
               height: '1.5rem',

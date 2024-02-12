@@ -11,9 +11,9 @@ const DEBUG_OPTIMA_LAYOUT_PLUGGING = false;
 export const PreferencesTab = {
   None: 0,
   Chat: 1,
-  Voice: 2,
-  Draw: 3,
-  Tools: 4,
+  // Voice: 2,
+  // Draw: 3,
+  // Tools: 4,
 } as const;
 
 type PreferencesTabType = typeof PreferencesTab[keyof typeof PreferencesTab];

@@ -24,6 +24,8 @@ import WorkspacesOutlinedIcon from '@mui/icons-material/WorkspacesOutlined';
 // Link icons
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { DiscordIcon } from '~/common/components/icons/DiscordIcon';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import WhatsappIcon from '@mui/icons-material/WhatsApp';
 // Modal icons
 import BuildCircleIcon from '@mui/icons-material/BuildCircle';
 import SettingsIcon from '@mui/icons-material/Settings';
@@ -95,26 +97,26 @@ export const navItems: {
       type: 'app',
       route: '/',
     },
-    {
-      name: 'Call',
-      barTitle: 'Voice Calls',
-      icon: CallOutlinedIcon,
-      iconActive: CallIcon,
-      type: 'app',
-      route: '/call',
-      hideDrawer: true,
-      fullWidth: true,
-    },
-    {
-      name: 'Draw',
-      barTitle: 'Generate Images',
-      icon: FormatPaintOutlinedIcon,
-      iconActive: FormatPaintIcon,
-      type: 'app',
-      route: '/draw',
-      // hideOnMobile: true,
-      hideDrawer: true,
-    },
+    // {
+    //   name: 'Call',
+    //   barTitle: 'Voice Calls',
+    //   icon: CallOutlinedIcon,
+    //   iconActive: CallIcon,
+    //   type: 'app',
+    //   route: '/call',
+    //   hideDrawer: true,
+    //   fullWidth: true,
+    // },
+    // {
+    //   name: 'Draw',
+    //   barTitle: 'Generate Images',
+    //   icon: FormatPaintOutlinedIcon,
+    //   iconActive: FormatPaintIcon,
+    //   type: 'app',
+    //   route: '/draw',
+    //   // hideOnMobile: true,
+    //   hideDrawer: true,
+    // },
     {
       name: 'Cortex',
       icon: AutoAwesomeOutlinedIcon,
@@ -192,12 +194,12 @@ export const navItems: {
       type: 'modal',
       overlayId: 'models',
     },
-    {
-      name: 'Preferences',
-      icon: SettingsIcon,
-      type: 'modal',
-      overlayId: 'settings',
-    },
+    // {
+    //   name: 'Preferences',
+    //   icon: SettingsIcon,
+    //   type: 'modal',
+    //   overlayId: 'settings',
+    // },
   ],
 
   // External links
@@ -208,18 +210,30 @@ export const navItems: {
     //   icon: TwitterIcon,
     //   href: 'https://twitter.com',
     // },
+    // {
+    //   type: 'extLink',
+    //   name: 'Discord',
+    //   icon: DiscordIcon,
+    //   href: Brand.URIs.SupportInvite,
+    // },
     {
       type: 'extLink',
-      name: 'Discord',
-      icon: DiscordIcon,
-      href: Brand.URIs.SupportInvite,
+      name: 'Instagram',
+      icon: InstagramIcon,
+      href: Brand.URIs.InstagramInvite,
     },
     {
       type: 'extLink',
-      name: 'GitHub',
-      icon: GitHubIcon,
-      href: Brand.URIs.OpenRepo,
+      name: 'Whatsapp',
+      icon: WhatsappIcon,
+      href: Brand.URIs.WhatsappInvite,
     },
+    // {
+    //   type: 'extLink',
+    //   name: 'GitHub',
+    //   icon: GitHubIcon,
+    //   href: Brand.URIs.OpenRepo,
+    // },
   ],
 
 };

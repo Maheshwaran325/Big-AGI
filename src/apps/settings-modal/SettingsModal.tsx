@@ -113,100 +113,100 @@ export function SettingsModal(props: {
 
   const tabFixSx = { fontFamily: 'body', flex: 1, p: 0, m: 0 };
 
-  return (
-    <GoodModal
-      title='Preferences' strongerTitle
-      open={props.open} onClose={props.onClose}
-      startButton={isMobile ? undefined : (
-        <Button variant='soft' onClick={props.onOpenShortcuts}>
-          👉 See Shortcuts
-        </Button>
-      )}
-    >
+//   return (
+//     <GoodModal
+//       title='Preferences' strongerTitle
+//       open={props.open} onClose={props.onClose}
+//       startButton={isMobile ? undefined : (
+//         <Button variant='soft' onClick={props.onOpenShortcuts}>
+//           👉 See Shortcuts
+//         </Button>
+//       )}
+//     >
 
-      <Divider />
+//       <Divider />
 
-      <Tabs aria-label='Settings tabbed menu' defaultValue={props.tabIndex}>
-        <TabList
-          variant='soft'
-          disableUnderline
-          sx={{
-            '--ListItem-minHeight': '2.4rem',
-            bgcolor: 'primary.softHoverBg',
-            mb: 2,
-            p: 0.5,
-            borderRadius: 'md',
-            fontSize: 'md',
-            gap: 1,
-            overflow: 'hidden',
-            [`& .${tabClasses.root}[aria-selected="true"]`]: {
-              color: 'primary.plainColor',
-              bgcolor: 'background.surface',
-              boxShadow: 'lg',
-              fontWeight: 'md',
-            },
-          }}
-        >
-          <Tab disableIndicator value={PreferencesTab.Chat} sx={tabFixSx}>Chat</Tab>
-          <Tab disableIndicator value={PreferencesTab.Voice} sx={tabFixSx}>Voice</Tab>
-          <Tab disableIndicator value={PreferencesTab.Draw} sx={tabFixSx}>Draw</Tab>
-          <Tab disableIndicator value={PreferencesTab.Tools} sx={tabFixSx}>Tools</Tab>
-        </TabList>
+//       <Tabs aria-label='Settings tabbed menu' defaultValue={props.tabIndex}>
+//         <TabList
+//           variant='soft'
+//           disableUnderline
+//           sx={{
+//             '--ListItem-minHeight': '2.4rem',
+//             bgcolor: 'primary.softHoverBg',
+//             mb: 2,
+//             p: 0.5,
+//             borderRadius: 'md',
+//             fontSize: 'md',
+//             gap: 1,
+//             overflow: 'hidden',
+//             [`& .${tabClasses.root}[aria-selected="true"]`]: {
+//               color: 'primary.plainColor',
+//               bgcolor: 'background.surface',
+//               boxShadow: 'lg',
+//               fontWeight: 'md',
+//             },
+//           }}
+//         >
+//           <Tab disableIndicator value={PreferencesTab.Chat} sx={tabFixSx}>Chat</Tab>
+//           <Tab disableIndicator value={PreferencesTab.Voice} sx={tabFixSx}>Voice</Tab>
+//           <Tab disableIndicator value={PreferencesTab.Draw} sx={tabFixSx}>Draw</Tab>
+//           <Tab disableIndicator value={PreferencesTab.Tools} sx={tabFixSx}>Tools</Tab>
+//         </TabList>
 
-        <TabPanel value={PreferencesTab.Chat} variant='outlined' sx={{ p: 'var(--Tabs-gap)', borderRadius: 'md' }}>
-          <Topics>
-            <Topic>
-              <AppChatSettingsUI />
-            </Topic>
-            <Topic icon='🧠' title='Chat AI' startCollapsed>
-              <AppChatSettingsAI />
-            </Topic>
-            <Topic icon={<ScienceIcon />} title='Labs' startCollapsed>
-              <UxLabsSettings />
-            </Topic>
-          </Topics>
-        </TabPanel>
+//         <TabPanel value={PreferencesTab.Chat} variant='outlined' sx={{ p: 'var(--Tabs-gap)', borderRadius: 'md' }}>
+//           <Topics>
+//             <Topic>
+//               <AppChatSettingsUI />
+//             </Topic>
+//             <Topic icon='🧠' title='Chat AI' startCollapsed>
+//               <AppChatSettingsAI />
+//             </Topic>
+//             <Topic icon={<ScienceIcon />} title='Labs' startCollapsed>
+//               <UxLabsSettings />
+//             </Topic>
+//           </Topics>
+//         </TabPanel>
 
-        <TabPanel value={PreferencesTab.Voice} variant='outlined' sx={{ p: 'var(--Tabs-gap)', borderRadius: 'md' }}>
-          <Topics>
-            <Topic icon='🎙️' title='Voice settings'>
-              <VoiceSettings />
-            </Topic>
-            <Topic icon='📢' title='ElevenLabs API'>
-              <ElevenlabsSettings />
-            </Topic>
-          </Topics>
-        </TabPanel>
+//         <TabPanel value={PreferencesTab.Voice} variant='outlined' sx={{ p: 'var(--Tabs-gap)', borderRadius: 'md' }}>
+//           <Topics>
+//             <Topic icon='🎙️' title='Voice settings'>
+//               <VoiceSettings />
+//             </Topic>
+//             <Topic icon='📢' title='ElevenLabs API'>
+//               <ElevenlabsSettings />
+//             </Topic>
+//           </Topics>
+//         </TabPanel>
 
-        <TabPanel value={PreferencesTab.Draw} variant='outlined' sx={{ p: 'var(--Tabs-gap)', borderRadius: 'md' }}>
-          <Topics>
-            <Topic>
-              <T2ISettings />
-            </Topic>
-            <Topic icon='🖍️️' title='OpenAI DALL·E' startCollapsed>
-              <DallESettings />
-            </Topic>
-            <Topic icon='🖍️️' title='Prodia API' startCollapsed>
-              <ProdiaSettings noSkipKey />
-            </Topic>
-          </Topics>
-        </TabPanel>
+//         <TabPanel value={PreferencesTab.Draw} variant='outlined' sx={{ p: 'var(--Tabs-gap)', borderRadius: 'md' }}>
+//           <Topics>
+//             <Topic>
+//               <T2ISettings />
+//             </Topic>
+//             <Topic icon='🖍️️' title='OpenAI DALL·E' startCollapsed>
+//               <DallESettings />
+//             </Topic>
+//             <Topic icon='🖍️️' title='Prodia API' startCollapsed>
+//               <ProdiaSettings noSkipKey />
+//             </Topic>
+//           </Topics>
+//         </TabPanel>
 
-        <TabPanel value={PreferencesTab.Tools} variant='outlined' sx={{ p: 'var(--Tabs-gap)', borderRadius: 'md' }}>
-          <Topics>
-            <Topic icon={<SearchIcon />} title='Browsing' startCollapsed>
-              <BrowseSettings />
-            </Topic>
-            <Topic icon={<SearchIcon />} title='Google Search API' startCollapsed>
-              <GoogleSearchSettings />
-            </Topic>
-            {/*<Topic icon='🛠' title='Other tools...' />*/}
-          </Topics>
-        </TabPanel>
-      </Tabs>
+//         <TabPanel value={PreferencesTab.Tools} variant='outlined' sx={{ p: 'var(--Tabs-gap)', borderRadius: 'md' }}>
+//           <Topics>
+//             <Topic icon={<SearchIcon />} title='Browsing' startCollapsed>
+//               <BrowseSettings />
+//             </Topic>
+//             <Topic icon={<SearchIcon />} title='Google Search API' startCollapsed>
+//               <GoogleSearchSettings />
+//             </Topic>
+//             {/*<Topic icon='🛠' title='Other tools...' />*/}
+//           </Topics>
+//         </TabPanel>
+//       </Tabs>
 
-      <Divider />
+//       <Divider />
 
-    </GoodModal>
-  );
-}
+//     </GoodModal>
+//   );
+ }

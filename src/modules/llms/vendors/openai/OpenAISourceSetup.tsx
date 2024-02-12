@@ -68,7 +68,7 @@ export function OpenAISourceSetup(props: { sourceId: DModelSourceId }) {
 
     {advanced.on && <FormTextField
       title='Organization ID'
-      description={<Link level='body-sm' href={`${Brand.URIs.OpenRepo}/issues/63`} target='_blank'>What is this</Link>}
+      // description={<Link level='body-sm' href={`${Brand.URIs.OpenRepo}/issues/63`} target='_blank'>What is this</Link>}
       placeholder='Optional, for enterprise users'
       value={oaiOrg}
       onChange={text => updateSetup({ oaiOrg: text })}

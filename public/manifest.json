@@ -1,9 +1,9 @@
 {
-  "name": "big-AGI",
-  "short_name": "big-AGI",
+  "name": "SprochatAI",
+  "short_name": "SprochatAI",
   "theme_color": "#32383E",
   "background_color": "#9FA6AD",
-  "description": "Personal AGI App",
+  "description": "Marketing AI App",
   "display": "standalone",
   "start_url": "/",
   "icons": [

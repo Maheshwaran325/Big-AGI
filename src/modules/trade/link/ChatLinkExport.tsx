@@ -137,8 +137,9 @@ export function ChatLinkExport(props: {
         confirmationText={<>
           Everyone who has the unlisted link will be able to access this chat.
           It will be automatically deleted after 30 days.
-          For more information, please see the <Link href={Brand.URIs.PrivacyPolicy} target='_blank'>privacy
-          policy</Link> of this server. <br />
+          {/* For more information, please see the <Link href={Brand.URIs.PrivacyPolicy} target='_blank'>privacy
+          policy</Link> of this server. */}
+          <br /> 
           Do you wish to continue?
         </>}
         positiveActionText={'Yes, Create Link'}

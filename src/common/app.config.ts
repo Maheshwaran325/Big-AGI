@@ -12,10 +12,10 @@ export const Brand = {
     Common: (process.env.NODE_ENV === 'development' ? '[DEV] ' : '') + 'Sprochatai',
   },
   Meta: {
-    Description: 'Launch Sprochatai to unlock the full potential of AI, with precise control over your data and models. AI personas, advanced features, and fun UX.',
-    SiteName: 'Sprochatai | Precision AI for You',
-    ThemeColor: '#32383E',
-    TwitterSite: '',
+    Description: 'Sprochatai from Statix.pro offers complete control over your data and AI models, unlocking advanced features, personalized AI interactions, and AI personas. Experience a revolutionary interface designed to inspire innovation and redefine your AI marketing experience.',
+    SiteName: 'Sprochatai | AI for Marketing with Personas',
+    ThemeColor: '#0d2137',
+    InstagramInvite: 'https://www.instagram.com/statix_pro',
   },
   URIs: {
     Home: 'https://statix.pro',
@@ -27,6 +27,6 @@ export const Brand = {
     InstagramInvite: 'https://www.instagram.com/statix_pro',
     WhatsappInvite: 'https://wa.me/9361091908',
     // Twitter: 'https://www.twitter.com/enricoros',
-    PrivacyPolicy: 'https://big-agi.com/privacy',
+    // PrivacyPolicy: 'https://big-agi.com/privacy',
   },
 };
